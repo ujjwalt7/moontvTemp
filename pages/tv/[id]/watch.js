@@ -165,8 +165,8 @@ export default function WatchTv() {
                 </div>
                 <div className="flex gap-2">
               <div className="flex gap-1">
-                <Link onClick={()=>{setiframeLoadingState(true)}} href={`/tv/${router.query.id}/watch?s${season}&e=${Number(episode)!==1?Number(episode)-1:episode}`} className={`px-4 py-2 rounded-lg ${Number(episode)!==1?'bg-grey':'cursor-not-allowed border border-grey line-through'}`}>Prev</Link>
-                <Link onClick={()=>{setiframeLoadingState(true)}} href={`/tv/${router.query.id}/watch?s${season}&e=${Number(episode)!==(seasonData?.episodes?.length)?Number(episode)+1:episode}`} className={`px-4 py-2 rounded-lg ${Number(episode)!==(seasonData?.episodes?.length)?'bg-grey':'cursor-not-allowed border border-grey line-through'}`}>Next</Link>
+                <Link onClick={()=>{setiframeLoadingState(true)}} href={`/tv/${router.query.id}/watch?s${seasonData?.season_number}&e=${Number(episode)!==1?Number(episode)-1:episode}`} className={`px-4 py-2 rounded-lg ${Number(episode)!==1?'bg-grey':'cursor-not-allowed border border-grey line-through'}`}>Prev</Link>
+                <Link onClick={()=>{setiframeLoadingState(true)}} href={`/tv/${router.query.id}/watch?s${seasonData?.season_number}&e=${Number(episode)!==(seasonData?.episodes?.length)?Number(episode)+1:episode}`} className={`px-4 py-2 rounded-lg ${Number(episode)!==(seasonData?.episodes?.length)?'bg-grey':'cursor-not-allowed border border-grey line-through'}`}>Next</Link>
               </div>
 
                 </div>
